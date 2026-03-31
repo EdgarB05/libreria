@@ -59,3 +59,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     ])->name('admin-dashboard');
 });
 
+
+//Ruta para mostrar el inicio del sistema
+
+Route::get('/home', [
+    LibroController::class, 'home'
+])->name('home');
